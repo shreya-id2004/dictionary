@@ -1,8 +1,8 @@
-
+//javascript file for dictionary API 
 
 const input = document.querySelector('#input');
 const btn = document.querySelector('#search');
-const url = "https://api.dictionaryapi.dev/api/v2/entries/en/"
+const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";  //API
 const def = document.querySelector('.def');
 const audio = document.querySelector('.audio');
 const not = document.querySelector('.not_found');
@@ -15,7 +15,7 @@ btn.addEventListener('click', async function(e){
 async function getword(){
     try {
         let word = input.value;
-        let res = await axios.get(`${url}${word}`);
+        let res = await axios.get(`${url}${word}`);  //fecting the result form the api
 
         if (res.data && res.data.length > 0) {
             let data = res.data[0];
